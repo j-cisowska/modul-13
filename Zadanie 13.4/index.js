@@ -1,13 +1,26 @@
 var fs = require('fs');
 
-fs.readFile('./book.txt', 'utf-8', function(err, data) {
-    console.log('Cała książka');
+fs.readFile('./index.js', 'utf-8', function(err, data) {
+    console.log('Plik index.js');
     console.log(data);
-    fs.writeFile('./book-chapter.txt', '\nProin in orci efficitur, vulputate nibh in, volutpat nibh. Sed sodales non massa sit amet rutrum. Mauris nisl est, efficitur sed porttitor non, eleifend vehicula orci.', function(err) {
+    fs.writeFile('info/index.js', data, function(err) {
         if (err) throw err;
         console.log('Zapisano!');
-        fs.readFile('./book-chapter.txt', 'utf-8', function(err, data) {
-            console.log('Jeden rozdiał!')
+        fs.readFile('info/index.js', 'utf-8', function(err, data) {
+            console.log('Skopiowany plik index.js!')
+            console.log(data);
+        });
+    });
+});
+
+fs.readFile('./package.json', 'utf-8', function(err, data) {
+    console.log('Plik package.json');
+    console.log(data);
+    fs.writeFile('info/package.json', data, function(err) {
+        if (err) throw err;
+        console.log('Zapisano!');
+        fs.readFile('info/package.json', 'utf-8', function(err, data) {
+            console.log('Skopiowany plik package.json!')
             console.log(data);
         });
     });

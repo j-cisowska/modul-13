@@ -1,4 +1,0 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est venenatis,
-finibus dolor ac, pulvinar lacus. Suspendisse vestibulum a metus vel dapibus.
-Phasellus finibus felis lectus, vel auctor neque laoreet sit amet. 
-Integer elementum dui quis mi eleifend, nec vulputate lorem egestas.
