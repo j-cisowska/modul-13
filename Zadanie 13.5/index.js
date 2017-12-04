@@ -10,7 +10,7 @@ var http = require('http');
     });
     } else {
             response.statusCode = 404;
-            response.write('<img src="https://learn.getgrav.org/user/pages/11.troubleshooting/01.page-not-found/error-404.png" alt="Error 404"> title="Error"');
+            response.write('<img src="https://learn.getgrav.org/user/pages/11.troubleshooting/01.page-not-found/error-404.png" alt="Error 404" title="Error">');
             response.end();
     }
 });
