@@ -13,12 +13,9 @@ process.stdin.on('readable', function() {
               case '/info':
               process.stdout.write('OS: ' + process.env.OS + ', LANG: ' + process.env.LANG);
               break;
-              case '/user':
-              process.stdout.write('User: ' + process.env.USER);
-              break;
-              case '/getOSinfo':
-              var OSinfo = require('../modules/OSInfo');
-              OSinfo.print();
+              case '/getTime':
+              var timeNow = require('../times/time');
+			  timeNow.print();
               break;
               case '/exit':
               process.stdout.write('Quitting the app!\n');

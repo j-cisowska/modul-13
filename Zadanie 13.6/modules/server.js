@@ -1,7 +1,7 @@
 var http = require('http');
 var colors = require('colors');
 
-var handlers = require('./handlers'); // nasz moduł  ///SPRAWDZIĆ MODUŁ CZY MA BYĆ W FOLDERZE
+var handlers = require('./handlers'); // nasz moduł 
 
 function start() {
   function onRequest(request, response) {
@@ -10,7 +10,7 @@ function start() {
 
     response.writeHead(200, {"Content-Type": "text/plain; charset=utf-8"});
 
-    switch (request.url) { // switch rozróżniający zapytania
+    switch (request.url) { // switch który ma obserwować zapytania
         case '/':
         case '/start':
             handlers.welcome(request, response);
