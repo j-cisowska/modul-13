@@ -4,7 +4,7 @@ var os = require('os');
 process.stdin.setEncoding('utf-8');
 
 process.stdin.on('readable', function() {
-    // metoda .read() ma za zadanie odczytać co użytkownik podał na wejściu
+    
     var input = process.stdin.read();
     if (input !== null) {
         var instruction = input.toString().trim();
@@ -13,9 +13,9 @@ process.stdin.on('readable', function() {
               case '/info':
               process.stdout.write('OS: ' + process.env.OS + ', LANG: ' + process.env.LANG);
               break;
-              case '/getTime':
-              var timeNow = require('../times/time');
-			  timeNow.print();
+              case '/getOSinfo':
+              var OSinfo = require('./modules/OSInfo');
+              OSinfo.print();
               break;
               case '/exit':
               process.stdout.write('Quitting the app!\n');
