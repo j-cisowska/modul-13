@@ -1,15 +1,13 @@
-var os = require('os');
-
 //odczytanie wartości z polskimi znakami
 process.stdin.setEncoding('utf-8');
 
 process.stdin.on('readable', function() {
-    // metoda .read() ma za zadanie odczytać co użytkownik podał na wejściu
+    
     var input = process.stdin.read();
     if (input !== null) {
         var instruction = input.toString().trim();
 
-function secondsToHms(time) {
+/*function secondsToHms(time) {
     var components = [
     date.getHours(),
     date.getMinutes(),
@@ -27,7 +25,7 @@ var id = components.join("");
     var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
     var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
     return hDisplay + mDisplay + sDisplay; 
-}
+}*/
 
 
 
