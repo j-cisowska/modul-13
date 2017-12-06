@@ -36,8 +36,7 @@ exports.show = function(request, response) {
 
 
 exports.error = function(request, response) {
-    console.log("Nie wiem co robić.");
+    console.log("Wszystko zrobione.");
     response.write("404 :(");
     response.end();
 }
-

@@ -1,9 +1,7 @@
 var http = require('http');
 var colors = require('colors');
+var handlers = require('./handlers'); // nasz moduł
 
-var handlers = require('./handlers'); // nasz moduł 
-
-function start() {
   function onRequest(request, response) {
     console.log("Odebrano zapytanie.".green);
     console.log("Zapytanie " + request.url + " odebrane.");
@@ -18,17 +16,18 @@ function start() {
         case '/upload':
             handlers.upload(request, response);
             break;
-		case '/show':
-			handlers.show(request, response);
-			break;
-        default:
+		    case '/show':
+			      handlers.show(request, response);
+			      break;
+            default:
             handlers.error(request, response);
     }
   }
 
+function start() {
   http.createServer(onRequest).listen(9000);
 
-  console.log("Uruchomiono serwer!".green);
+  console.log("Uruchomiono serwer! localhost:9000".green);
 }
 
 exports.start = start;
